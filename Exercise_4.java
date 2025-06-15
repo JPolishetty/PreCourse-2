@@ -12,9 +12,7 @@ class MergeSort
             left[i] = arr[l + i];
         for (int j = 0; j < s2; ++j)
             right[j] = arr[m + 1 + j];
-
         int i = 0, j = 0;
-
         int k = l;
         while (i < s1 && j < s2) {
             if (left[i] <= right[j]) {
@@ -27,19 +25,16 @@ class MergeSort
             }
             k++;
         }
-
         while (i < s1) {
             arr[k] = left[i];
             i++;
             k++;
         }
-
         while (j < s2) {
             arr[k] = right[j];
             j++;
             k++;
         }
-
     } 
   
     // Main function that sorts arr[l..r] using 
